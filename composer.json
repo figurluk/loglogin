@@ -1,9 +1,7 @@
 {
   "name": "figurluk/loginlog",
   "description": "Laravel package for logging users login.",
-  "type": "library",
   "license": "MIT",
-  "minimum-stability": "stable",
   "authors": [
     {
       "name": "Lukas Figura"
@@ -19,5 +17,7 @@
   "psr-4": {
     "App\\": "app/",
     "Figurluk\\LoginLog\\": "packages/figurluk/loginlog/src/"
-  }
+  },
+  "type": "library",
+  "minimum-stability": "stable"
 }
