@@ -10,36 +10,52 @@ namespace Figurluk\LogLogin\Providers;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
-class LogLoginEventServiceProvider extends ServiceProvider
+class LogEventServiceProvider extends ServiceProvider
 {
-    /**
-     * The event handler mappings for the application.
-     *
-     * @var array
-     */
-    protected $listen = [
-        'Figurluk\LogLogin\Events\LogLoginEvent' => [
-            'Figurluk\LogLogin\Listeners\LogLoginEventListener',
-        ],
-    ];
 
     /**
-     * Register any other events for your application.
+     * Actual provider
      *
-     * @param  \Illuminate\Contracts\Events\Dispatcher $events
+     * @var \Illuminate\Foundation\Support\Providers\EventServiceProvider
+     */
+    protected $provider;
+
+    /**
+     * Create a new service provider instance.
+     *
+     * @param  \Illuminate\Contracts\Foundation\Application $app
      *
      * @return void
      */
-    public function boot(DispatcherContract $events)
+    public function __construct($app)
     {
-        parent::boot($events);
+        parent::__construct($app);
 
-
-        //
+        $this->provider = $this->getProvider();
     }
 
-    public function register()
+
+    /**
+     * Return ServiceProvider according to Laravel version
+     *
+     * @return \Intervention\Image\Provider\ProviderInterface
+     */
+    private function getProvider()
     {
-        //
+        if (version_compare(\Illuminate\Foundation\Application::VERSION, '5.1', '=')) {
+            $provider = '\Figurluk\LogLogin\Providers\LogEventServiceProvider51';
+        } else {
+            $provider = '\Figurluk\LogLogin\Providers\LogEventServiceProvider52';
+        }
+
+        return new $provider($this->app);
+    }
+
+    /**
+     * Register any other events for your application.
+     */
+    public function boot(DispatcherContract $events)
+    {
+        return $this->provider->boot($events);
     }
 }

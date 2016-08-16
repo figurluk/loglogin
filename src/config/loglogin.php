@@ -6,5 +6,5 @@
  */
 
 return [
-    "message" => "Welcome to your new package"
+    "table_name" => "loglogin"
 ];

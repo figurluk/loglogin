@@ -1,10 +1,9 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
 
-class CreateLoginLogTable extends Migration
+class CreateLoginlogTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +12,11 @@ class CreateLoginLogTable extends Migration
      */
     public function up()
     {
-        Schema::create('loginlog', function (Blueprint $table) {
+        Schema::create(config('loglogin.table_name'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('ip_address');
             $table->unsignedInteger('user_id');
-            $table->nullableTimestamps();
+            $table->timestamp('created_at');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateLoginLogTable extends Migration
      */
     public function down()
     {
-        Schema::drop('loginlog');
+        Schema::drop(config('loglogin.table_name'));
     }
 }
