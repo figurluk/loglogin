@@ -8,6 +8,7 @@ use Illuminate\Support\ServiceProvider;
  * Date: 16.08.16
  * Time: 20:30
  */
+
 class LogLoginServiceProvider extends ServiceProvider
 {
 
