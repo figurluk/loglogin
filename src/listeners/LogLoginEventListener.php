@@ -2,11 +2,9 @@
 
 namespace Figurluk\LogLogin\Listeners;
 
-use Figurluk\LogLogin\Events\LogLoginEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * User: Lukas Figura
@@ -32,7 +30,7 @@ class LogLoginEventListener implements ShouldQueue
     {
 
         DB::table(config('loglogin.table_name'))->insert([
-            'ip_address' => Request::ip(),
+            'ip_address' => \Request::getClientIp(),
             'user_id'    => Auth::user()->id,
             'created_at' => date('Y-m-d H:i:s')
         ]);

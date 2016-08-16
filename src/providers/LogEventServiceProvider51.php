@@ -12,7 +12,6 @@ use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\HttpFoundation\Request;
 
 class LogEventServiceProvider51 extends ServiceProvider
 {
@@ -31,7 +30,7 @@ class LogEventServiceProvider51 extends ServiceProvider
 
         $events->listen('auth.login', function ($user, $remember) {
             DB::table(config('loglogin.table_name'))->insert([
-                'ip_address' => Request::ip(),
+                'ip_address' => \Request::getClientIp(),
                 'user_id'    => Auth::user()->id,
                 'created_at' => date('Y-m-d H:i:s')
             ]);
