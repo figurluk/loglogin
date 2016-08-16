@@ -10,20 +10,20 @@
 Laravel package which log users login.
 
 ## Instalation
-**1st step:** include this library with composer 
+**1st step:** composer require 
 
         composer require figurluk/loginlog
 
-**2nd step:** add to your app.php service providers:
+**2nd step:** Service providers:
                 
         Figurluk\LogLogin\LogLoginServiceProvider::class
         Figurluk\LogLogin\Providers\LogEventServiceProvider::class
         
-**3rd step** publish configuration file and migrations
+**3rd step** Publish configuration and migration
 
         php artisan vendor:publish
 
-**4th step** migrate new table in database for save logs
+**4th step** Migrate
 
         php artisan migrate
 
