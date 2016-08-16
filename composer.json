@@ -1,5 +1,5 @@
 {
-  "name": "figurluk/loginlog",
+  "name": "figurluk/loglogin",
   "description": "Laravel package for logging users login.",
   "license": "MIT",
   "authors": [
@@ -14,9 +14,10 @@
     "illuminate/http": "^5.2",
     "illuminate/database": "^5.2"
   },
-  "psr-4": {
-    "App\\": "app/",
-    "Figurluk\\LoginLog\\": "src/"
+  "autoload": {
+    "psr-4": {
+      "Figurluk\\LogLogin\\": "src/"
+    }
   },
   "type": "library",
   "minimum-stability": "stable"

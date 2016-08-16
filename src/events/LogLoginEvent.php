@@ -1,6 +1,6 @@
 <?php
 
-namespace Figurluk\Loginlog\Events;
+namespace Figurluk\LogLogin\Events;
 
 use App\Events\Event;
 use Illuminate\Http\Request;

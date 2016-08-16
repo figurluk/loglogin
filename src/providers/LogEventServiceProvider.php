@@ -1,6 +1,6 @@
 <?php
 
-namespace Figurluk\Loginlog\Providers;
+namespace Figurluk\LogLogin\Providers;
 
 /**
  * User: Lukas Figura
@@ -18,8 +18,8 @@ class LogLoginEventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Figurluk\Loginlog\Events\LogLoginEvent' => [
-            'Figurluk\Loginlog\Listeners\LogLoginEventListener',
+        'Figurluk\LogLogin\Events\LogLoginEvent' => [
+            'Figurluk\LogLogin\Listeners\LogLoginEventListener',
         ],
     ];
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Figurluk\Loginlog\Listeners;
+namespace Figurluk\LogLogin\Listeners;
 
-use figurluk\loginlog\events\LogLoginEvent;
+use Figurluk\LogLogin\Events\LogLoginEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 /**
