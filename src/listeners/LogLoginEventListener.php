@@ -1,6 +1,6 @@
 <?php
 
-namespace figurluk\loginlog\listeners;
+namespace Figurluk\Loginlog\Listeners;
 
 use figurluk\loginlog\events\LogLoginEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;

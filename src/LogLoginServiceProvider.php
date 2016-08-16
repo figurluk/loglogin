@@ -1,6 +1,6 @@
 <?php
 
-namespace figurluk\loginlog\providers;
+namespace Figurluk\Loginlog;
 use Illuminate\Support\ServiceProvider;
 
 /**
