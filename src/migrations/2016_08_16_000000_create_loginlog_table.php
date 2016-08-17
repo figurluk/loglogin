@@ -25,7 +25,7 @@ class CreateLoginlogTable extends Migration
                 $table->string('locale');
             }
             if (config('loglogin.user_agent')) {
-                $table->text('login_request_url');
+                $table->text('user_agent');
             }
 
             $table->timestamp('logged_at');
