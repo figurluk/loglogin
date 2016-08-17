@@ -18,7 +18,7 @@ class LogLoginServiceProvider51 extends ServiceProvider
      */
     public function register()
     {
-        include __DIR__.'http/routes.php';
+        include __DIR__.'/http/routes.php';
         $this->app->make('Figurluk\LogLogin\Controllers\LogLoginController');
     }
 
