@@ -63,11 +63,11 @@ class LogLoginServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/loglogin.php' => config_path('loglogin.php')
+            __DIR__.'/config/loglogin.php' => config_path('loglogin.php')
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/migrations/' => database_path('migrations')
+            __DIR__.'/migrations/' => database_path('migrations')
         ], 'migrations');
 
         return $this->provider->boot();
