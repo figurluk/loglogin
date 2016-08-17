@@ -2,7 +2,7 @@
 
 namespace Figurluk\LogLogin\Providers;
 
-/**
+/*
  * User: Lukas Figura
  * Date: 16.08.16
  * Time: 20:39
@@ -12,9 +12,8 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 
 class LogEventServiceProvider extends ServiceProvider
 {
-
     /**
-     * Actual provider
+     * Actual provider.
      *
      * @var \Illuminate\Foundation\Support\Providers\EventServiceProvider
      */
@@ -23,7 +22,7 @@ class LogEventServiceProvider extends ServiceProvider
     /**
      * Create a new service provider instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application $app
+     * @param \Illuminate\Contracts\Foundation\Application $app
      *
      * @return void
      */
@@ -34,9 +33,8 @@ class LogEventServiceProvider extends ServiceProvider
         $this->provider = $this->getProvider();
     }
 
-
     /**
-     * Return ServiceProvider according to Laravel version
+     * Return ServiceProvider according to Laravel version.
      *
      * @return \Intervention\Image\Provider\ProviderInterface
      */

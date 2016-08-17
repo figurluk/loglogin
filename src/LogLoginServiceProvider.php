@@ -7,13 +7,12 @@ use Illuminate\Support\ServiceProvider;
 /**
  * User: Lukas Figura
  * Date: 16.08.16
- * Time: 20:30
+ * Time: 20:30.
  */
 class LogLoginServiceProvider extends ServiceProvider
 {
-
     /**
-     * Actual provider
+     * Actual provider.
      *
      * @var \Illuminate\Support\ServiceProvider
      */
@@ -22,7 +21,7 @@ class LogLoginServiceProvider extends ServiceProvider
     /**
      * Create a new service provider instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application $app
+     * @param \Illuminate\Contracts\Foundation\Application $app
      *
      * @return void
      */
@@ -34,7 +33,7 @@ class LogLoginServiceProvider extends ServiceProvider
     }
 
     /**
-     * Return ServiceProvider according to Laravel version
+     * Return ServiceProvider according to Laravel version.
      *
      * @return \Intervention\Image\Provider\ProviderInterface
      */
@@ -59,18 +58,16 @@ class LogLoginServiceProvider extends ServiceProvider
         return $this->provider->register();
     }
 
-
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/config/loglogin.php' => config_path('loglogin.php')
-        ], 'config');
+        $this->publishes(array(
+            __DIR__.'/config/loglogin.php' => config_path('loglogin.php'),
+        ), 'config');
 
-        $this->publishes([
-            __DIR__.'/migrations/' => database_path('migrations')
-        ], 'migrations');
+        $this->publishes(array(
+            __DIR__.'/migrations/' => database_path('migrations'),
+        ), 'migrations');
 
         return $this->provider->boot();
     }
-
 }

@@ -3,9 +3,8 @@
  * Created by PhpStorm.
  * User: Lukas Figura
  * Date: 16.08.16
- * Time: 23:13
+ * Time: 23:13.
  */
-
 namespace Figurluk\LogLogin\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
@@ -15,12 +14,10 @@ use Illuminate\Support\Facades\DB;
 
 class LogEventServiceProvider51 extends ServiceProvider
 {
-
-
     /**
      * Register any other events for your application.
      *
-     * @param  \Illuminate\Contracts\Events\Dispatcher $events
+     * @param \Illuminate\Contracts\Events\Dispatcher $events
      *
      * @return void
      */
@@ -29,11 +26,11 @@ class LogEventServiceProvider51 extends ServiceProvider
         parent::boot($events);
 
         $events->listen('auth.login', function ($user, $remember) {
-            DB::table(config('loglogin.table_name'))->insert([
+            DB::table(config('loglogin.table_name'))->insert(array(
                 'ip_address' => \Request::getClientIp(),
-                'user_id'    => Auth::user()->id,
-                'created_at' => date('Y-m-d H:i:s')
-            ]);
+                'user_id' => Auth::user()->id,
+                'created_at' => date('Y-m-d H:i:s'),
+            ));
         });
     }
 }
