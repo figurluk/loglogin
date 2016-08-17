@@ -7,7 +7,7 @@
 <a href="https://www.tldrlegal.com/l/mit"><img src="https://camo.githubusercontent.com/3ce76a8291b83cd2eaf305703ee718a281d09b66/687474703a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d627269676874677265656e2e7376673f7374796c653d666c61742d737175617265" alt="License" data-canonical-src="http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" style="max-width:100%;"></a>
 </p>
 
-Laravel package which log users login.
+Simple logging of user logins for Your Laravel App
 
 ## Instalation
 **1st step:** composer require 
