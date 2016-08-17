@@ -3,9 +3,9 @@
 namespace Figurluk\LogLogin\Listeners;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 
 /**
  * User: Lukas Figura
