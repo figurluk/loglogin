@@ -25,12 +25,6 @@ class LogEventServiceProvider51 extends ServiceProvider
     {
         parent::boot($events);
 
-        $events->listen('auth.login', function ($user, $remember) {
-            DB::table(config('loglogin.table_name'))->insert(array(
-                'ip_address' => \Request::getClientIp(),
-                'user_id' => Auth::user()->id,
-                'created_at' => date('Y-m-d H:i:s'),
-            ));
-        });
+        $events->listen('auth.login', 'Figurluk\LogLogin\Listeners\LogLoginEventListener@handle');
     }
 }
