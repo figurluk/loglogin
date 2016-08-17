@@ -24,7 +24,6 @@ class LogEventServiceProvider extends ServiceProvider
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
      *
-     * @return void
      */
     public function __construct($app)
     {
@@ -35,8 +34,6 @@ class LogEventServiceProvider extends ServiceProvider
 
     /**
      * Return ServiceProvider according to Laravel version.
-     *
-     * @return \Intervention\Image\Provider\ProviderInterface
      */
     private function getProvider()
     {
@@ -51,6 +48,8 @@ class LogEventServiceProvider extends ServiceProvider
 
     /**
      * Register any other events for your application.
+     *
+     * @param DispatcherContract $events
      */
     public function boot(DispatcherContract $events)
     {
