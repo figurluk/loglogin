@@ -3,11 +3,3 @@ preset: laravel
 risky: false
 
 linting: true
-
-enabled:
-  - align_double_arrow
-  - long_array_syntax
-
-disabled:
-  - short_array_syntax
-  - unalign_double_arrow

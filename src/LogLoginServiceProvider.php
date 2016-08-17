@@ -40,7 +40,8 @@ class LogLoginServiceProvider extends ServiceProvider
     private function getProvider()
     {
         if (version_compare(\Illuminate\Foundation\Application::VERSION, '5.1', '>=')
-            && version_compare(\Illuminate\Foundation\Application::VERSION, '5.2', '<')) {
+            && version_compare(\Illuminate\Foundation\Application::VERSION, '5.2', '<')
+        ) {
             $provider = '\Figurluk\LogLogin\LogLoginServiceProvider51';
         } else {
             $provider = '\Figurluk\LogLogin\LogLoginServiceProvider52';

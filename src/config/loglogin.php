@@ -15,7 +15,7 @@ return array(
     | This value determines the "name" of table in database where logs will be stored.
     |
     */
-    'table_name'        => 'loglogin',
+    'table_name' => 'loglogin',
 
 
     /*
@@ -30,7 +30,7 @@ return array(
     | user_agent        -> log login request user-agent url
     */
     'login_request_url' => true,
-    'locale'            => false,
-    'user_agent'        => true,
+    'locale' => false,
+    'user_agent' => true,
 
 );
