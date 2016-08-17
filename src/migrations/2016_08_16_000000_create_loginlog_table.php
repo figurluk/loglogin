@@ -14,9 +14,21 @@ class CreateLoginlogTable extends Migration
     {
         Schema::create(config('loglogin.table_name'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ip_address');
             $table->unsignedInteger('user_id');
-            $table->timestamp('created_at');
+
+            $table->string('ip_address');
+
+            if (config('loglogin.login_request_url')) {
+                $table->string('login_request_url');
+            }
+            if (config('loglogin.locale')) {
+                $table->string('locale');
+            }
+            if (config('loglogin.user_agent')) {
+                $table->text('login_request_url');
+            }
+
+            $table->timestamp('logged_at');
         });
     }
 

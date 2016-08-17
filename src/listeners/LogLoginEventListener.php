@@ -5,6 +5,7 @@ namespace Figurluk\LogLogin\Listeners;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 /**
  * User: Lukas Figura
@@ -26,10 +27,21 @@ class LogLoginEventListener implements ShouldQueue
      */
     public function handle()
     {
-        DB::table(config('loglogin.table_name'))->insert(array(
-            'ip_address' => \Request::getClientIp(),
-            'user_id' => Auth::user()->id,
-            'created_at' => date('Y-m-d H:i:s'),
-        ));
+        $insertArr = [];
+        $insertArr['ip_address'] = Request::getClientIp();
+        $insertArr['user_id'] = Auth::user()->id;
+        $insertArr['logged_at'] = date('Y-m-d H:i:s');
+
+        if (config('loglogin.login_request_url')) {
+            $insertArr['login_request_url'] = Request::getUri();
+        }
+        if (config('loglogin.locale')) {
+            $insertArr['locale'] = Request::getLocale();
+        }
+        if (config('loglogin.user_agent')) {
+            $insertArr['user_agent'] = Request::header('user-agent');
+        }
+
+        DB::table(config('loglogin.table_name'))->insert($insertArr);
     }
 }
