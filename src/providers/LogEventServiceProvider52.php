@@ -17,11 +17,11 @@ class LogEventServiceProvider52 extends ServiceProvider
      *
      * @var array
      */
-    protected $listen = array(
-        'Illuminate\Auth\Events\Login' => array(
+    protected $listen = [
+        'Illuminate\Auth\Events\Login' => [
             'Figurluk\LogLogin\Listeners\LogLoginEventListener',
-        ),
-    );
+        ],
+    ];
 
     /**
      * Register any other events for your application.
