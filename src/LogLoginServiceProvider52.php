@@ -18,9 +18,16 @@ class LogLoginServiceProvider52 extends ServiceProvider
      */
     public function register()
     {
+        include __DIR__.'http/routes.php';
+        $this->app->make('Figurluk\LogLogin\Controllers\LogLoginController');
     }
 
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/views', 'loglogin');
+
+        $this->publishes([
+            __DIR__.'/views' => base_path('resources/views/figurluk/loglogin'),
+        ],'views');
     }
 }
