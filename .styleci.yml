@@ -6,8 +6,8 @@ linting: true
 
 enabled:
   - align_double_arrow
-  - short_array_syntax
+  - long_array_syntax
 
 disabled:
-  - long_array_syntax
+  - short_array_syntax
   - unalign_double_arrow

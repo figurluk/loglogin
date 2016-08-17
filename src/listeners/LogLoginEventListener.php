@@ -27,7 +27,7 @@ class LogLoginEventListener implements ShouldQueue
      */
     public function handle()
     {
-        $insertArr = [];
+        $insertArr = array();
         $insertArr['ip_address'] = Request::getClientIp();
         $insertArr['user_id'] = Auth::user()->id;
         $insertArr['logged_at'] = date('Y-m-d H:i:s');
