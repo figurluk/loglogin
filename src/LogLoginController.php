@@ -1,6 +1,6 @@
 <?php
 
-namespace Figurluk\LogLogin\Controllers;
+namespace Figurluk\LogLogin;
 
 /**
  * User: Lukas Figura
