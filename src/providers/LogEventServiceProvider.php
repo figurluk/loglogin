@@ -23,7 +23,6 @@ class LogEventServiceProvider extends ServiceProvider
      * Create a new service provider instance.
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
-     *
      */
     public function __construct($app)
     {
