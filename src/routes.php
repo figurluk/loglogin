@@ -5,4 +5,5 @@
  * Time: 0:56
  */
 
-Route::get('figurluk/loglogin/logs','figurluk\loglogin\LogLoginController@getLogs');
+Route::get('figurluk/loglogin/logs', ['middleware' => config('loglogin.logs_middleware'),
+    'uses' => 'figurluk\loglogin\LogLoginController@getLogs']);
