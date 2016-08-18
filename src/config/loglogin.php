@@ -17,6 +17,66 @@ return [
     */
     'table_name' => 'loglogin',
 
+    /*
+    |--------------------------------------------------------------------------
+    | LogLogin belongs class
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the class which login is logged.
+    | Value is used for belongs to relation.
+    |
+    */
+    'belongs_class' => 'App\User',
+
+    /*
+    |--------------------------------------------------------------------------
+    | LogLogin belongs class identifier
+    |--------------------------------------------------------------------------
+    |
+    | This value determines ID identifier in database of class which login is logged.
+    | Value is used for belongs to relation identifier.
+    |
+    */
+    'belongs_class_id' => 'id',
+
+    /*
+    |--------------------------------------------------------------------------
+    | LogLogin belongs class username attribute
+    |--------------------------------------------------------------------------
+    |
+    | This value determines name of attribute in logged class which is used
+    | as username.
+    |
+    */
+    'belongs_class_username_attribute' => 'email',
+
+    /*
+    |--------------------------------------------------------------------------
+    | LogLogin logs view extend layout namespace
+    |--------------------------------------------------------------------------
+    */
+    'admin_layout' => 'layouts.admin',
+
+    /*
+    |--------------------------------------------------------------------------
+    | LogLogin logs view content section name
+    |--------------------------------------------------------------------------
+    */
+    'admin_layout_content_section' => 'content',
+
+    /*
+    |--------------------------------------------------------------------------
+    | LogLogin logs view styles section name
+    |--------------------------------------------------------------------------
+    */
+    'admin_layout_styles_section' => 'styles',
+
+    /*
+    |--------------------------------------------------------------------------
+    | LogLogin logs view scripts section name
+    |--------------------------------------------------------------------------
+    */
+    'admin_layout_scripts_section' => 'scripts',
 
     /*
     |--------------------------------------------------------------------------

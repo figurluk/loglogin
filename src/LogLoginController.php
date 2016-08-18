@@ -8,13 +8,15 @@ namespace Figurluk\LogLogin;
  * Time: 0:54
  */
 use App\Http\Controllers\Controller;
+use Figurluk\LogLogin\Models\LogLoginItem;
 
 class LogLoginController extends Controller
 {
 
     public function getLogs()
     {
-        return view('loglogin::logs.index');
+        $logs = LogLoginItem::get();
+        return view('loglogin::logs.index',compact(['logs']));
     }
 
 }
