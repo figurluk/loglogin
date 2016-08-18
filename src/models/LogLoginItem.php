@@ -1,11 +1,9 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: Lukas Figura
  * Date: 18.08.16
- * Time: 1:33
+ * Time: 1:33.
  */
-
 namespace Figurluk\LogLogin\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -25,6 +23,7 @@ class LogLoginItem extends Model
     public function getLoggedAtAttribute($value)
     {
         $value = date('j.n.Y G:i:s', strtotime($value));
+
         return $value;
     }
 
@@ -32,4 +31,5 @@ class LogLoginItem extends Model
     {
         return $this->belongsTo(config('loglogin.belongs_class'), 'user_id', config('loglogin.belongs_class_id'));
     }
+
 }

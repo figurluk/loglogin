@@ -6,44 +6,45 @@
 
 @section(config('loglogin.admin_layout_content_section'))
 
-    <table class="table table-striped">
-        <tbody>
-        <tr>
-            <th>Username</th>
-            <th>IP address</th>
-            @if (config('loglogin.login_request_url'))
-                <th>Request URL</th>
-            @endif
-            @if (config('loglogin.locale'))
-                <th>Locale</th>
-            @endif
-            @if (config('loglogin.user_agent'))
-                <th>User agent</th>
-            @endif
-            <th>Logged at</th>
-        </tr>
-
-        @foreach($logs as $log)
+    <div class="table-responsive">
+        <table class="table table-condensed table-striped">
+            <tbody>
             <tr>
-                <td>{{$log->user->getAttributes()[config('loglogin.belongs_class_username_attribute')]}}</td>
-                <td>{{$log->ip_address}}</td>
-
+                <th>Username</th>
+                <th>IP</th>
                 @if (config('loglogin.login_request_url'))
-                    <td>{{$log->login_request_url}}</td>
+                    <th>Request URL</th>
                 @endif
                 @if (config('loglogin.locale'))
-                    <td>{{$log->locale}}</td>
+                    <th>Locale</th>
                 @endif
                 @if (config('loglogin.user_agent'))
-                    <td>{{$log->user_agent}}</td>
+                    <th>User agent</th>
                 @endif
-
-                <td>{{$log->logged_at}}</td>
+                <th>Logged at</th>
             </tr>
-        @endforeach
-        </tbody>
-    </table>
 
+            @foreach($logs as $log)
+                <tr>
+                    <td>{{$log->user->getAttributes()[config('loglogin.belongs_class_username_attribute')]}}</td>
+                    <td>{{$log->ip_address}}</td>
+
+                    @if (config('loglogin.login_request_url'))
+                        <td>{{$log->login_request_url}}</td>
+                    @endif
+                    @if (config('loglogin.locale'))
+                        <td>{{$log->locale}}</td>
+                    @endif
+                    @if (config('loglogin.user_agent'))
+                        <td>{{$log->user_agent}}</td>
+                    @endif
+
+                    <td>{{$log->logged_at}}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 
 @endsection
 

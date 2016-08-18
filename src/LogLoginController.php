@@ -2,7 +2,7 @@
 
 namespace Figurluk\LogLogin;
 
-/**
+/*
  * User: Lukas Figura
  * Date: 18.08.16
  * Time: 0:54
@@ -18,7 +18,7 @@ class LogLoginController extends Controller
         $log = new LogLoginItem();
         $log->setTable(config('loglogin.table_name'));
         $logs = $log->get();
+
         return view('loglogin::logs.index',compact(['logs']));
     }
-
 }

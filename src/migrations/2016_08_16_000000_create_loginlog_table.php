@@ -19,13 +19,13 @@ class CreateLoginlogTable extends Migration
             $table->string('ip_address');
 
             if (config('loglogin.login_request_url')) {
-                $table->string('login_request_url');
+                $table->string('login_request_url')->nullable();
             }
             if (config('loglogin.locale')) {
-                $table->string('locale');
+                $table->string('locale')->nullable();
             }
             if (config('loglogin.user_agent')) {
-                $table->text('user_agent');
+                $table->text('user_agent')->nullable();
             }
 
             $table->timestamp('logged_at');

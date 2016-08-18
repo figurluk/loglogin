@@ -2,7 +2,6 @@
 
 namespace Figurluk\LogLogin;
 
-use Figurluk\LogLogin\Models\LogLoginItem;
 use Illuminate\Support\ServiceProvider;
 
 /**
