@@ -71,7 +71,6 @@ class LogLoginServiceProvider extends ServiceProvider
             __DIR__.'/migrations/' => database_path('migrations'),
         ], 'migrations');
 
-        LogLoginItem::setTable(config('loglogin.table_name'));
         return $this->provider->boot();
     }
 }

@@ -15,7 +15,9 @@ class LogLoginController extends Controller
 
     public function getLogs()
     {
-        $logs = LogLoginItem::get();
+        $log = new LogLoginItem();
+        $log->setTable(config('loglogin.table_name'));
+        $logs = $log->get();
         return view('loglogin::logs.index',compact(['logs']));
     }
 
