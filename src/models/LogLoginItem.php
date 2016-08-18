@@ -31,5 +31,4 @@ class LogLoginItem extends Model
     {
         return $this->belongsTo(config('loglogin.belongs_class'), 'user_id', config('loglogin.belongs_class_id'));
     }
-
 }

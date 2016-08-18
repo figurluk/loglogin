@@ -12,13 +12,12 @@ use Figurluk\LogLogin\Models\LogLoginItem;
 
 class LogLoginController extends Controller
 {
-
     public function getLogs()
     {
         $log = new LogLoginItem();
         $log->setTable(config('loglogin.table_name'));
         $logs = $log->get();
 
-        return view('loglogin::logs.index',compact(['logs']));
+        return view('loglogin::logs.index', compact(['logs']));
     }
 }
