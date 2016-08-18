@@ -10,7 +10,7 @@
         <table class="table table-condensed table-striped">
             <tbody>
             <tr>
-                <th>Username</th>
+                <th>User</th>
                 <th>IP</th>
                 @if (config('loglogin.login_request_url'))
                     <th>Request URL</th>
@@ -21,7 +21,7 @@
                 @if (config('loglogin.user_agent'))
                     <th>User agent</th>
                 @endif
-                <th>Logged at</th>
+                <th>Logged</th>
             </tr>
 
             @foreach($logs as $log)
