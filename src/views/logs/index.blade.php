@@ -42,8 +42,16 @@
                     <td>{{$log->logged_at}}</td>
                 </tr>
             @endforeach
+
             </tbody>
         </table>
+        @if (version_compare(\Illuminate\Foundation\Application::VERSION, '5.1', '>=')
+            && version_compare(\Illuminate\Foundation\Application::VERSION, '5.2', '<')
+        )
+            {!! $logs->render() !!}
+        @else
+            {{ $logs->links() }}
+        @endif
     </div>
 
 @endsection
