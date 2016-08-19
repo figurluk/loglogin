@@ -35,6 +35,8 @@ After 3rd step you are able to configure loglogin library.
 
 Remember to refresh migration after any change in your configuration.
 
+If you want redirect to logs use: **url(config('loglogin.admin_route_logs'))**
+
 In **config/loglogin.php** you will find this configuration options:
 
     table_name
