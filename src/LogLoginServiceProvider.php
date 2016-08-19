@@ -62,6 +62,8 @@ class LogLoginServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/views', 'loglogin');
+
         $this->publishes([
             __DIR__.'/config/loglogin.php' => config_path('loglogin.php'),
         ], 'config');
@@ -69,6 +71,10 @@ class LogLoginServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/migrations/' => database_path('migrations'),
         ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/views' => base_path('resources/views/vendor/loglogin'),
+        ], 'views');
 
         return $this->provider->boot();
     }

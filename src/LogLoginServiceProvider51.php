@@ -24,10 +24,5 @@ class LogLoginServiceProvider51 extends ServiceProvider
 
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/views', 'loglogin');
-
-        $this->publishes([
-            __DIR__.'/views' => base_path('resources/views/figurluk/loglogin'),
-        ], 'views');
     }
 }
