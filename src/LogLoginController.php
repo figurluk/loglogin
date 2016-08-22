@@ -16,7 +16,7 @@ class LogLoginController extends Controller
     {
         $log = new LogLoginItem();
         $log->setTable(config('loglogin.table_name'));
-        $logs = $log->paginate(15);
+        $logs = $log->orderBy('logged_at','desc')->paginate(15);
 
         return view('loglogin::logs.index', compact(['logs']));
     }
