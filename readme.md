@@ -86,3 +86,12 @@ In **config/loglogin.php** you will find this configuration options:
         default => true
         info    => This value determines if login request user-agent will be logged.
          
+
+## Credits
+
+- [Lukas Figura](https://github.com/figurluk)
+- [E-zone](https://github.com/e-zone-technologies)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
