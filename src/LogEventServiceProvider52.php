@@ -5,7 +5,7 @@
  * Date: 16.08.16
  * Time: 23:13.
  */
-namespace Figurluk\LogLogin\Providers;
+namespace Figurluk\LogLogin;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

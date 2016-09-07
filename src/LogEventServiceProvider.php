@@ -1,6 +1,6 @@
 <?php
 
-namespace Figurluk\LogLogin\Providers;
+namespace Figurluk\LogLogin;
 
 /*
  * User: Lukas Figura
@@ -39,9 +39,9 @@ class LogEventServiceProvider extends ServiceProvider
         if (version_compare(\Illuminate\Foundation\Application::VERSION, '5.1', '>=')
             && version_compare(\Illuminate\Foundation\Application::VERSION, '5.2', '<')
         ) {
-            $provider = '\Figurluk\LogLogin\Providers\LogEventServiceProvider51';
+            $provider = '\Figurluk\LogLogin\LogEventServiceProvider51';
         } else {
-            $provider = '\Figurluk\LogLogin\Providers\LogEventServiceProvider52';
+            $provider = '\Figurluk\LogLogin\LogEventServiceProvider52';
         }
 
         return new $provider($this->app);

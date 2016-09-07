@@ -17,7 +17,7 @@
 **2nd step:** Service providers:
                 
         Figurluk\LogLogin\LogLoginServiceProvider::class
-        Figurluk\LogLogin\Providers\LogEventServiceProvider::class
+        Figurluk\LogLogin\LogEventServiceProvider::class
         
 **3rd step** Publish configuration and migration
 
