@@ -1,11 +1,13 @@
 # LogLogin
 
+# !!! Not maintained
+
 <p>
 <a href="https://raw.githubusercontent.com/figurluk/loglogin/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" style="max-width:100%;"></a>
 </p>
 
-####Simple logging of user logins for Your Laravel App
-#####Library provide easy system to log users logins and show logs in Your admin section.
+#### Simple logging of user logins for Your Laravel App
+##### Library provide easy system to log users logins and show logs in Your admin section.
 
 Library support Laravel 5.2 and 5.1
 
