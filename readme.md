@@ -1,6 +1,6 @@
 # LogLogin
 
-# !!! Not maintained
+## !!! Not maintained
 
 <p>
 <a href="https://raw.githubusercontent.com/figurluk/loglogin/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" style="max-width:100%;"></a>
